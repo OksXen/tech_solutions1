@@ -7,13 +7,15 @@ namespace TechSolutionsLibs.Provider
     {
         public virtual DbSet<EmployeeActivity> EmployeeActivity { get; set; }
 
+        public ActivityDBContext(DbContextOptions options) : base(options) { }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
+            //if (!optionsBuilder.IsConfigured)
+            //{
 
-                optionsBuilder.UseSqlServer(@"Data Source=tcp:s19.winhost.com;Initial Catalog=DB_127750_activity;User ID=DB_127750_activity_user;Password=th8uxgWBLf8M;Integrated Security=False;");
-            }
+            //    optionsBuilder.UseSqlServer(@"Data Source=tcp:s19.winhost.com;Initial Catalog=DB_127750_activity;User ID=DB_127750_activity_user;Password=th8uxgWBLf8M;Integrated Security=False;");
+            //}
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -23,7 +23,7 @@ namespace TechSolutionsLibs.Provider
             }
             catch
             {
-                throw;
+                return 0;
             }
         }
 
@@ -36,7 +36,7 @@ namespace TechSolutionsLibs.Provider
             }
             catch
             {
-                throw;
+                return null;
             }
         }
     }

@@ -4,14 +4,14 @@
     "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\XUnitTestProject1.csproj": {}
   },
   "projects": {
-    "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\XUnitTestProject1.csproj": {
+    "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\XUnitTestProject1.csproj",
-        "projectName": "XUnitTestProject1",
-        "projectPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\XUnitTestProject1.csproj",
+        "projectUniqueName": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj",
+        "projectName": "TechSolutionsLibs",
+        "projectPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj",
         "packagesPath": "D:\\Users\\fcodi\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\obj\\",
+        "outputPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,6 +42,98 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\XUnitTestProject1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\XUnitTestProject1.csproj",
+        "projectName": "XUnitTestProject1",
+        "projectPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\XUnitTestProject1.csproj",
+        "packagesPath": "D:\\Users\\fcodi\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "D:\\Users\\fcodi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/orchardcore-preview/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj": {
+                "projectPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.2.0, )"

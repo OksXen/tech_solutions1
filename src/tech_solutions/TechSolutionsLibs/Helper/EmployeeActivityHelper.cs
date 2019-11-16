@@ -10,7 +10,7 @@ namespace TechSolutionsLibs.Helper
         {
             try
             {
-                ActivityDBContext activityDBContext = new ActivityDBContext();
+                ActivityDBContext activityDBContext = new ActivityDBContext(DbOptionsFactory.DbContextOptions);
                 EmployeeActivityProvider employeeActivityProvider = new EmployeeActivityProvider(activityDBContext);
                 employeeActivityProvider.AddEmployee(employeeActivity);
                 return 1;
@@ -26,7 +26,7 @@ namespace TechSolutionsLibs.Helper
         {
             try
             {
-                ActivityDBContext activityDBContext = new ActivityDBContext();
+                ActivityDBContext activityDBContext = new ActivityDBContext(DbOptionsFactory.DbContextOptions);
                 EmployeeActivityProvider employeeActivityProvider = new EmployeeActivityProvider(activityDBContext);
                 return employeeActivityProvider.GetEmployeeActivities();                
             }

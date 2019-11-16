@@ -1,9 +1,7 @@
-﻿using TechSolutionsLibs.Helper;
-using TechSolutionsLibs.Model;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Text;
+using TechSolutionsLibs.Helper;
+using TechSolutionsLibs.Model;
 
 namespace TechSolutionsLibs.Controllers
 {

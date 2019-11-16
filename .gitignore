@@ -11,3 +11,4 @@ src/tech_solutions/.vs/tech_solutions/DesignTimeBuild/.dtbcache
 src/tech_solutions/TechSolutionsLibs/obj/TechSolutionsLibs.csproj.nuget.cache
 *.cache
 *.cache
+*.pdb

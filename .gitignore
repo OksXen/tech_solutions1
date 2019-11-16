@@ -1,0 +1,7 @@
+
+*.lock
+*.ide
+*.ide-shm
+*.ide-wal
+src/tech_solutions/.vs/tech_solutions/v16/.suo
+src/tech_solutions/.vs/tech_solutions/DesignTimeBuild/.dtbcache

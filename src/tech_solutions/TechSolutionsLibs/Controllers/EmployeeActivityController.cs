@@ -24,8 +24,15 @@ namespace TechSolutionsLibs.Controllers
         }
 
         [HttpPost]
-        [Route("AddEmployeeActivity")]
-        public int AddEmployeeActivity([FromBody] EmployeeActivity employeeActivity)
+        [Route("AddEmployeeActivityByForm")]        
+        public int AddEmployeeActivityByForm([FromForm] EmployeeActivity employeeActivity)
+        {
+            return EmployeeActivityHelper.AddEmployeeActivity(employeeActivity);
+        }
+        
+        [HttpPost]
+        [Route("AddEmployeeActivityByBody")]        
+        public int AddEmployeeActivityByBody([FromBody] EmployeeActivity employeeActivity)
         {
             return EmployeeActivityHelper.AddEmployeeActivity(employeeActivity);
         }

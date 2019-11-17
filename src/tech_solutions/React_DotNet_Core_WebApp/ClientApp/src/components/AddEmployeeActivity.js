@@ -66,7 +66,7 @@ export class AddEmployeeActivity extends Component {
         console.log(errors);
         return <div>
           
-            <h3>Add Employee Activity</h3>
+            <h3>Activity sign up form</h3>
             <hr />
             <form onSubmit={this.handleSubmit} >
 

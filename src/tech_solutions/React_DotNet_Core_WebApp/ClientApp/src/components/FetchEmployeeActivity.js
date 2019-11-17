@@ -17,7 +17,7 @@ export class FetchEmployeeActivity extends Component {
             <table className='table table-striped' aria-labelledby="tabelLabel">
                 <thead>
                     <tr>
-                        <th>Activity Id</th>
+                        <th>Id</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email Address</th>
@@ -48,7 +48,7 @@ export class FetchEmployeeActivity extends Component {
 
         return (
             <div>
-                <h1 id="tabelLabel" >Employee Activities</h1>                
+                <h1 id="tabelLabel" >Interested Persons Listing</h1>                
                 {contents}
             </div>
         );

@@ -22,6 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\package-lock.json.942864080" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TechSolutionsLibs\TechSolutionsLibs.csproj" />
   </ItemGroup>
 

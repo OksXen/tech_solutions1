@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
 import { Home } from './components/Home';
-import { FetchEmployeeActivity } from './components/FetchEmployeeActivity';
-import { AddEmployeeActivity } from './components/AddEmployeeActivity';
+import { FetchEmployeeActivity } from './components/Fetch/FetchEmployeeActivity';
+import { AddEmployeeActivity } from './components/CRUD/AddEmployeeActivity';
 
 import './custom.css'
 

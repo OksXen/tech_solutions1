@@ -1,0 +1,19 @@
+*****requirements****
+https://medium.com/front-end-weekly/tested-react-lets-build-a-data-table-a76aa100d23f
+https://airbnb.io/enzyme/docs/api/ShallowWrapper/key.html
+#install enzyme
+npm install --save-dev enzyme enzyme-adapter-react-16
+
+
+
+
+
+reference: https://reactjs.org/docs/testing.html
+reference: https://jestjs.io/docs/en/getting-started
+
+#'jest' is used for unit testing in react
+
+npm run test
+
+
+

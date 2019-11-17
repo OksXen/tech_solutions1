@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import styles from '../custom.css';
+import styles from '../../custom.css';
 
 
 export class AddEmployeeActivity extends Component {
@@ -24,7 +24,6 @@ export class AddEmployeeActivity extends Component {
         const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
 
         switch (name) {
-
             case 'emailAddress':
                 errors.email =
                     validEmailRegex.test(value)
@@ -40,6 +39,8 @@ export class AddEmployeeActivity extends Component {
                         : '';
 
                 this.setState({ errors, [name]: value });
+                break;
+            default:
                 break;
           
         }
@@ -108,9 +109,9 @@ export class AddEmployeeActivity extends Component {
                 <div className="form-group row" >
                     <label className=" control-label col-md-12" htmlFor="comments">Comments</label>
                     <div className="col-md-4">
-                        <input className="form-control" type="text" name="comments" required ref={(input) => this.comments = input} />
+                        <textarea className="form-control" type="text" name="comments" required ref={(input) => this.comments = input} />                        
                     </div>
-                </div >
+                </div>
 
 
 

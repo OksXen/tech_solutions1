@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Mvc;
 using TechSolutionsLibs.Models;
 using TechSolutionsLibs.Repository.Interface;
 
@@ -15,10 +9,6 @@ namespace TechSolutionsLibs.Controllers
         //private readonly ILogger<HomeController> _logger;
         IEmployeeActivityRepository _employeeActivityProvider;
 
-        //public AddEmployeeActivityController(ILogger<HomeController> logger)
-        //{
-        //    _logger = logger;
-        //}
 
         public EmployeeActivityController(IEmployeeActivityRepository employeeActivityProvider)
         {
@@ -29,7 +19,35 @@ namespace TechSolutionsLibs.Controllers
         {
             return View();
         }
+        
+        public IActionResult AddEmployeeActivity(EmployeeActivityViewModel employeeActivityViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var employeeActivity = new EmployeeActivity()
+                {
+                    FirstName = employeeActivityViewModel.FirstName,
+                    LastName = employeeActivityViewModel.LastName,
+                    EmailAddress = employeeActivityViewModel.EmailAddress,
+                    ActivityName = employeeActivityViewModel.ActivityName,
+                    Comments = employeeActivityViewModel.Comments
+                };
 
+                _employeeActivityProvider.AddEmployee(employeeActivity);
+                return RedirectToAction("InterestedPersonListings");                
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
 
+        }
+
+        public IActionResult InterestedPersonListings()
+        {
+            var employeeActivities = _employeeActivityProvider.GetEmployeeActivities();
+            ViewData["employeeActivities"] = employeeActivities;
+            return View();
+        }
     }
 }

@@ -45,6 +45,16 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "SimpleInjector.Integration.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[4.7.2, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

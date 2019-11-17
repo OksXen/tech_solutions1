@@ -24,7 +24,9 @@
     ".NETCoreApp,Version=v3.0": {
       "dotnet_core_mvc_web_app/1.0.0": {
         "dependencies": {
+          "SimpleInjector.Integration.AspNetCore.Mvc": "4.7.2",
           "TechSolutionsLibs": "1.0.0",
+          "bootstrap": "4.3.1",
           "Microsoft.AspNetCore.Antiforgery.Reference": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.0.0.0",
@@ -315,6 +317,13 @@
           "dotnet_core_mvc_web_app.dll": {}
         }
       },
+      "bootstrap/4.3.1": {
+        "dependencies": {
+          "jQuery": "3.0.0",
+          "popper.js": "1.14.0"
+        }
+      },
+      "jQuery/3.0.0": {},
       "Microsoft.AspNetCore.Antiforgery/2.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.DataProtection": "2.2.0",
@@ -1057,6 +1066,7 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "popper.js/1.14.0": {},
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -1137,6 +1147,87 @@
             "assetType": "native",
             "fileVersion": "4.6.25512.1"
           }
+        }
+      },
+      "SimpleInjector/4.7.1": {
+        "dependencies": {
+          "System.ComponentModel": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SimpleInjector.dll": {
+            "assemblyVersion": "4.7.1.0",
+            "fileVersion": "4.7.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/SimpleInjector.dll": {}
+        }
+      },
+      "SimpleInjector.Integration.AspNetCore/4.7.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Http": "2.2.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "SimpleInjector": "4.7.1",
+          "SimpleInjector.Integration.ServiceCollection": "4.7.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SimpleInjector.Integration.AspNetCore.dll": {
+            "assemblyVersion": "4.7.1.0",
+            "fileVersion": "4.7.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/SimpleInjector.Integration.AspNetCore.dll": {}
+        }
+      },
+      "SimpleInjector.Integration.AspNetCore.Mvc/4.7.2": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Razor": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.RazorPages": "2.2.0",
+          "SimpleInjector.Integration.AspNetCore.Mvc.Core": "4.7.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SimpleInjector.Integration.AspNetCore.Mvc.dll": {
+            "assemblyVersion": "4.7.2.0",
+            "fileVersion": "4.7.2.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/SimpleInjector.Integration.AspNetCore.Mvc.dll": {}
+        }
+      },
+      "SimpleInjector.Integration.AspNetCore.Mvc.Core/4.7.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
+          "SimpleInjector.Integration.AspNetCore": "4.7.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SimpleInjector.Integration.AspNetCore.Mvc.Core.dll": {
+            "assemblyVersion": "4.7.1.0",
+            "fileVersion": "4.7.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/SimpleInjector.Integration.AspNetCore.Mvc.Core.dll": {}
+        }
+      },
+      "SimpleInjector.Integration.ServiceCollection/4.7.1": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.0",
+          "Microsoft.Extensions.Localization.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Logging.Abstractions": "3.0.0",
+          "SimpleInjector": "4.7.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SimpleInjector.Integration.ServiceCollection.dll": {
+            "assemblyVersion": "4.7.1.0",
+            "fileVersion": "4.7.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/SimpleInjector.Integration.ServiceCollection.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -3757,6 +3848,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "bootstrap/4.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lrVBeG2vmfwsHJuwSzeXz+1hPn/374vXDOAusU50vzljEWcFOFtif3wzIJJqfqQRHs2RnY0xttZ0Zv5JX4BFGg==",
+      "path": "bootstrap/4.3.1",
+      "hashPath": "bootstrap.4.3.1.nupkg.sha512"
+    },
+    "jQuery/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xFfntV19HzCtKdJWOp/XT9PUY3SslokTDDLFJZdBug36j1XVhw1+vPQ/n7Gd5y+jdpesn5B1m1yn1qIUq57jlA==",
+      "path": "jquery/3.0.0",
+      "hashPath": "jquery.3.0.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Antiforgery/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4352,6 +4457,13 @@
       "path": "newtonsoft.json.bson/1.0.1",
       "hashPath": "newtonsoft.json.bson.1.0.1.nupkg.sha512"
     },
+    "popper.js/1.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SPxZdXknelgQ015wey7GMZvsVdt/SyEmHYORhEp5k/uF9MUk9DPtkn+6dR98fud2hVWJjZm9KKr474+r7WQt+A==",
+      "path": "popper.js/1.14.0",
+      "hashPath": "popper.js.1.14.0.nupkg.sha512"
+    },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -4491,6 +4603,41 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SimpleInjector/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q4fJT28si/65R2cydmxeWv2t3pH33+IAA5vw9BlGSIok7KHmDBjwNc/ksRfg4oGw36HK7w7RSChL26Mk1edDvQ==",
+      "path": "simpleinjector/4.7.1",
+      "hashPath": "simpleinjector.4.7.1.nupkg.sha512"
+    },
+    "SimpleInjector.Integration.AspNetCore/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4i5c01wNas+ZcmWWWP2+oyEEkZVr9cGeovIIyKYXfAgUA7scy3y32aOE7LFDyFgxPC7O3YU/4pBSV8Udfx1biA==",
+      "path": "simpleinjector.integration.aspnetcore/4.7.1",
+      "hashPath": "simpleinjector.integration.aspnetcore.4.7.1.nupkg.sha512"
+    },
+    "SimpleInjector.Integration.AspNetCore.Mvc/4.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-svgBjxdIPYA+lHiS7M9uKzzVthtg6d9eowB4n3Dfd7ynmAXYoWz3PN7cRR5tcHxsjAL77+y+dlNYVbsGWkYWBA==",
+      "path": "simpleinjector.integration.aspnetcore.mvc/4.7.2",
+      "hashPath": "simpleinjector.integration.aspnetcore.mvc.4.7.2.nupkg.sha512"
+    },
+    "SimpleInjector.Integration.AspNetCore.Mvc.Core/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2ys4hmGuMwKdVQ6NI1oyGChErt3HGJUYEZcrCVQOZ5+VKp/XTQuKXaXiOrqddL+oupLxwoM+ieM8WPGv19FuTw==",
+      "path": "simpleinjector.integration.aspnetcore.mvc.core/4.7.1",
+      "hashPath": "simpleinjector.integration.aspnetcore.mvc.core.4.7.1.nupkg.sha512"
+    },
+    "SimpleInjector.Integration.ServiceCollection/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eS8O68fpHmlluKltWfS00URDxJ3sTi3PACaeBQGB6PgilTenEx6TOT8n7q7+LIOH98RUuP4kYajG+Lor0JT/+Q==",
+      "path": "simpleinjector.integration.servicecollection/4.7.1",
+      "hashPath": "simpleinjector.integration.servicecollection.4.7.1.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

@@ -49,7 +49,7 @@ namespace TechSolutionsLibs.Repository
 
                 return employeeActivities;
             }
-            catch
+            catch(Exception ex)
             {
                 return null;
             }

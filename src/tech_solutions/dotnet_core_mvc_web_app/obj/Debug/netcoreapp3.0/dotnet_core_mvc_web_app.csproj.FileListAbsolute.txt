@@ -1,8 +1,6 @@
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\dotnet_core_mvc_web_app.csprojAssemblyReference.cache
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\staticwebassets\dotnet_core_mvc_web_app.StaticWebAssets.Manifest.cache
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\staticwebassets\dotnet_core_mvc_web_app.StaticWebAssets.xml
-D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\dotnet_core_mvc_web_app.MvcApplicationPartsAssemblyInfo.cs
-D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\dotnet_core_mvc_web_app.MvcApplicationPartsAssemblyInfo.cache
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\dotnet_core_mvc_web_app.RazorAssemblyInfo.cache
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\dotnet_core_mvc_web_app.RazorAssemblyInfo.cs
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\dotnet_core_mvc_web_app.AssemblyInfoInputs.cache
@@ -11,7 +9,6 @@ D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\dotnet_core_mvc_web_app.TagHelpers.output.cache
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\dotnet_core_mvc_web_app.RazorCoreGenerate.cache
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs
-D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Error.cshtml.g.cs
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -64,3 +61,11 @@ D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\dotnet_core_mvc_web_app.Views.pdb
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\dotnet_core_mvc_web_app.csproj.CopyComplete
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\Razor\Views\EmployeeActivity\Index.cshtml.g.cs
+D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\bin\Debug\netcoreapp3.0\SimpleInjector.dll
+D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\bin\Debug\netcoreapp3.0\SimpleInjector.Integration.AspNetCore.dll
+D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\bin\Debug\netcoreapp3.0\SimpleInjector.Integration.AspNetCore.Mvc.dll
+D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\bin\Debug\netcoreapp3.0\SimpleInjector.Integration.AspNetCore.Mvc.Core.dll
+D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\bin\Debug\netcoreapp3.0\SimpleInjector.Integration.ServiceCollection.dll
+D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\dotnet_core_mvc_web_app.MvcApplicationPartsAssemblyInfo.cs
+D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\dotnet_core_mvc_web_app.MvcApplicationPartsAssemblyInfo.cache
+D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\Razor\Views\EmployeeActivity\InterestedPersonListings.cshtml.g.cs

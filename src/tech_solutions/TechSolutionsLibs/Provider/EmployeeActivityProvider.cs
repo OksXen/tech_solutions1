@@ -31,7 +31,7 @@ namespace TechSolutionsLibs.Provider
         {
             try
             {
-                return activityDBContext.EmployeeActivity.ToList();
+                return activityDBContext.EmployeeActivity.OrderByDescending(x=> x.ActivityId).ToList();
                                 
             }
             catch

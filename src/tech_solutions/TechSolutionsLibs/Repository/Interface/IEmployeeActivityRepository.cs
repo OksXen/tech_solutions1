@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using TechSolutionsLibs.Model;
+using TechSolutionsLibs.Models;
 
 namespace TechSolutionsLibs.Repository.Interface
 {

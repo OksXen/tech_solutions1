@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using TechSolutionsLibs.Model;
+using TechSolutionsLibs.Models;
 using TechSolutionsLibs.Repository;
 using TechSolutionsLibs.Repository.Interface;
 using Xunit;

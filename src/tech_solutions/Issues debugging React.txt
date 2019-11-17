@@ -1,0 +1,6 @@
+issues may happen debuggin react with IISExpress in Visual Studio 2019
+
+1. Error Message: Can't Connect to IISExpress. The issue may be related to ports that is already used by other web applications. 
+2. The solution is to change the port number in reactjs_project/properties/launchSettings.json
+
+e.g. change http://localhost:53454 to http://localhost:54454 or http://localhost:33454

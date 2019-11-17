@@ -1,4 +1,4 @@
-﻿using TechSolutionsLibs.Model;
+﻿using TechSolutionsLibs.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace TechSolutionsLibs.Repository.Interface

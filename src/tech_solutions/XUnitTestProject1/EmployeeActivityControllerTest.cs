@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using TechSolutionsLibs.Controllers;
-using TechSolutionsLibs.Model;
+using TechSolutionsLibs.Models;
 using TechSolutionsLibs.Repository;
 using Xunit;
 
@@ -17,7 +17,7 @@ namespace XUnitTestProject1
             DBSettings dBSettings = new DBSettings();
             EmployeeActivityDBContext employeeActivityDBContext = new EmployeeActivityDBContext(dBSettings);
             EmployeeActivityRepository employeeActivityRepository = new EmployeeActivityRepository(employeeActivityDBContext);
-            EmployeeActivityController employeeActivityController = new EmployeeActivityController(employeeActivityRepository);
+            EmployeeActivityApiController employeeActivityController = new EmployeeActivityApiController(employeeActivityRepository);
 
 
             //act
@@ -37,7 +37,7 @@ namespace XUnitTestProject1
             DBSettings dBSettings = new DBSettings();
             EmployeeActivityDBContext employeeActivityDBContext = new EmployeeActivityDBContext(dBSettings);
             EmployeeActivityRepository employeeActivityRepository = new EmployeeActivityRepository(employeeActivityDBContext);
-            EmployeeActivityController employeeActivityController = new EmployeeActivityController(employeeActivityRepository);
+            EmployeeActivityApiController employeeActivityController = new EmployeeActivityApiController(employeeActivityRepository);
             var tics = DateTime.Now.Ticks;
             EmployeeActivity employeeActivity = new EmployeeActivity()
             {

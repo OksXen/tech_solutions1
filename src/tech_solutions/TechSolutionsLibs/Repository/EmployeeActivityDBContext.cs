@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TechSolutionsLibs.Model;
+using TechSolutionsLibs.Models;
 using TechSolutionsLibs.Repository.Interface;
 
 namespace TechSolutionsLibs.Repository

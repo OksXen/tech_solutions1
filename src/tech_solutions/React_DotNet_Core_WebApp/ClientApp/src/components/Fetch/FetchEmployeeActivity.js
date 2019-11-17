@@ -43,7 +43,7 @@ export class FetchEmployeeActivity extends Component {
     }
 
     async populateEmployeeActivity() {
-        const response = await fetch('api/EmployeeActivity');
+        const response = await fetch('api/EmployeeActivityApi');
         const data = await response.json();
         this.setState({ employeeActivity: data, loading: false });
     }

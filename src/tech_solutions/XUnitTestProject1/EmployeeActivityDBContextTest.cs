@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TechSolutionsLibs.Model;
+using TechSolutionsLibs.Models;
 using TechSolutionsLibs.Repository;
 using TechSolutionsLibs.Repository.Interface;
 using Xunit;

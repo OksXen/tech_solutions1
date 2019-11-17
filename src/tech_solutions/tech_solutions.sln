@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 	ProjectSection(SolutionItems) = preProject
 		Database Connection Issues.txt = Database Connection Issues.txt
 		Documents\How to run reactjs test.txt = Documents\How to run reactjs test.txt
+		Issues debugging React.txt = Issues debugging React.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet_core_mvc_web_app", "dotnet_core_mvc_web_app\dotnet_core_mvc_web_app.csproj", "{517F8F1F-4C65-4E97-95A0-A8236A031376}"

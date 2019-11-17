@@ -139,7 +139,7 @@ export class AddEmployeeActivity extends Component {
 
 
             //// POST request for Add employee activity.          
-            fetch('api/EmployeeActivity/AddEmployeeActivityByForm', {
+            fetch('api/EmployeeActivityApi/AddEmployeeActivityByForm', {
                 method: 'POST',
                 body: data,
             }).then((response) => response.json())

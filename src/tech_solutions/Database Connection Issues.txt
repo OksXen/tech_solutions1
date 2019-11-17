@@ -1,0 +1,4 @@
+Issues that may happen connecting to remote database.
+
+1. Outgoing network call to port number 1433 is blocked. 
+2. . MS SQL Port number is blocked from inside. MS SQL Server's default port number is 1433. 

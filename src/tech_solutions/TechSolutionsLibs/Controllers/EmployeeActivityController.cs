@@ -17,10 +17,18 @@ namespace TechSolutionsLibs.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<EmployeeActivity> Get()
+        public IEnumerable<IEmployeeActivity> Get()
         {
+            var array = new EmployeeActivity[0];
+            var employeeActivities = _employeeActivityProvider.GetEmployeeActivities();
 
-            return _employeeActivityProvider.GetEmployeeActivities().ToArray();           
+            if (!ReferenceEquals(employeeActivities, null) && employeeActivities.Count>0) 
+            {
+                array = new EmployeeActivity[employeeActivities.Count];
+                employeeActivities.CopyTo(array, 0);
+            } 
+            return array;
+
         }
 
         [HttpPost]

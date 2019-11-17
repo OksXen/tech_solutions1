@@ -17,13 +17,12 @@ namespace TechSolutionsLibs.Provider
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-            {
-                // optionsBuilder.UseSqlServer(@"Data Source=tcp:s19.winhost.com;Initial Catalog=DB_127750_activity;User ID=DB_127750_activity_user;Password=th8uxgWBLf8M;Integrated Security=False;");
+            {                
                 optionsBuilder.UseSqlServer(_iDBSettings.ConnectionString);
             }
         }
 
-        public void SaveChanges()
+        public new void  SaveChanges()
         {
             base.SaveChanges();
         }

@@ -1,17 +1,13 @@
 ﻿using TechSolutionsLibs.Model;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace TechSolutionsLibs.Provider
 {
     public class EmployeeActivityProvider : IEmployeeActivityProvider
     {
-        //ActivityDBContext activityDBContext;
 
-        //public EmployeeActivityProvider(ActivityDBContext dBContext)
-        //{
-        //    activityDBContext = dBContext;
-        //}
 
         IEmployeeActivityDBContext _iEmployeeActivityDBContext;
 
@@ -24,12 +20,14 @@ namespace TechSolutionsLibs.Provider
         {
             try
             {
-                //activityDBContext.EmployeeActivity.Add(employeeActivity);
-                //activityDBContext.SaveChanges();
+                if (ReferenceEquals(employeeActivity, null)) throw new Exception("employeeActivity is null");
+
                 _iEmployeeActivityDBContext.EmployeeActivity.Add(employeeActivity);
                 _iEmployeeActivityDBContext.SaveChanges();
-                _iEmployeeActivityDBContext.SaveChanges();
-                return 1;
+
+                if (!ReferenceEquals(employeeActivity, null) && employeeActivity.ActivityId > 0) return employeeActivity.ActivityId;
+
+                return 0;
             }
             catch
             {
@@ -37,18 +35,25 @@ namespace TechSolutionsLibs.Provider
             }
         }
 
-        public List<EmployeeActivity> GetEmployeeActivities()
+
+        public IList<EmployeeActivity> GetEmployeeActivities()
         {
             try
             {
-                //return activityDBContext.EmployeeActivity.OrderByDescending(x=> x.ActivityId).ToList();
-                return _iEmployeeActivityDBContext.EmployeeActivity.OrderByDescending(x => x.ActivityId).ToList();
+                var employeeActivities = _iEmployeeActivityDBContext.EmployeeActivity.OrderByDescending(x => x.ActivityId).ToList();
+
+                if (ReferenceEquals(employeeActivities, null)) throw new Exception("employeeActivities is null.");
+
+                return employeeActivities;
 
             }
             catch
             {
+                
                 return null;
             }
         }
+
+       
     }
 }

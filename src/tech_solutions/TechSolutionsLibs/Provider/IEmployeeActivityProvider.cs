@@ -8,6 +8,6 @@ namespace TechSolutionsLibs.Provider
 
         int AddEmployee(EmployeeActivity employeeActivity);
 
-        List<EmployeeActivity> GetEmployeeActivities();
+        IList<EmployeeActivity> GetEmployeeActivities();
     }
 }

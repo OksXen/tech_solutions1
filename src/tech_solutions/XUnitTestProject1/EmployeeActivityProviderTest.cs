@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Linq;
 using TechSolutionsLibs.Model;
-using TechSolutionsLibs.Provider;
+using TechSolutionsLibs.Repository;
+using TechSolutionsLibs.Repository.Interface;
 using Xunit;
 
 namespace XUnitTestProject1
@@ -11,12 +13,12 @@ namespace XUnitTestProject1
         /// ensures add employee returns identity id
         /// </summary>
         [Fact]
-        public void AddEmployeeTest()
+        public async void AddEmployeeTest()
         {
             //arrange
             IDBSettings dBSettings = new DBSettings();
             IEmployeeActivityDBContext employeeActivityDBContext = new EmployeeActivityDBContext(dBSettings);
-            IEmployeeActivityProvider employeeActivityProvider = new EmployeeActivityProvider(employeeActivityDBContext);
+            IEmployeeActivityRepository employeeActivityProvider = new EmployeeActivityRepository(employeeActivityDBContext);
 
             var tics = DateTime.Now.Ticks;
             EmployeeActivity employeeActivity = new EmployeeActivity()
@@ -29,7 +31,7 @@ namespace XUnitTestProject1
             };
 
             //act
-            var result = employeeActivityProvider.AddEmployee(employeeActivity);
+            var result = await employeeActivityProvider.AddEmployee(employeeActivity);
 
             //assert
             Assert.NotEmpty(dBSettings.ConnectionString);
@@ -48,14 +50,14 @@ namespace XUnitTestProject1
             //arrange
             IDBSettings dBSettings = new DBSettings();
             IEmployeeActivityDBContext employeeActivityDBContext = new EmployeeActivityDBContext(dBSettings);
-            IEmployeeActivityProvider employeeActivityProvider = new EmployeeActivityProvider(employeeActivityDBContext);
+            IEmployeeActivityRepository employeeActivityProvider = new EmployeeActivityRepository(employeeActivityDBContext);
 
             //act
-            var result = employeeActivityProvider.GetEmployeeActivities();
+            var result = employeeActivityProvider.GetEmployeeActivities().ToList();
 
             //assert            
             Assert.NotNull(result);
-            Assert.NotEqual(0, result.Count);
+            Assert.NotEmpty(result);
         }
     }
 }

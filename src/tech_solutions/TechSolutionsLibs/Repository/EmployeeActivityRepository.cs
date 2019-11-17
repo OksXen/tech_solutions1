@@ -1,28 +1,30 @@
-﻿using TechSolutionsLibs.Model;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System;
+using System.Threading.Tasks;
+using TechSolutionsLibs.Model;
+using TechSolutionsLibs.Repository.Interface;
 
-namespace TechSolutionsLibs.Provider
+namespace TechSolutionsLibs.Repository
 {
-    public class EmployeeActivityProvider : IEmployeeActivityProvider
+    public class EmployeeActivityRepository : IEmployeeActivityRepository
     {
 
 
         IEmployeeActivityDBContext _iEmployeeActivityDBContext;
 
-        public EmployeeActivityProvider(IEmployeeActivityDBContext employeeActivityDBContext)
+        public EmployeeActivityRepository(IEmployeeActivityDBContext employeeActivityDBContext)
         {
             _iEmployeeActivityDBContext = employeeActivityDBContext;
         }
 
-        public int AddEmployee(EmployeeActivity employeeActivity)
+        public async Task<int> AddEmployee(EmployeeActivity employeeActivity)
         {
             try
             {
                 if (ReferenceEquals(employeeActivity, null)) throw new Exception("employeeActivity is null");
 
-                _iEmployeeActivityDBContext.EmployeeActivity.Add(employeeActivity);
+               await _iEmployeeActivityDBContext.EmployeeActivity.AddAsync(employeeActivity);
                 _iEmployeeActivityDBContext.SaveChanges();
 
                 if (!ReferenceEquals(employeeActivity, null) && employeeActivity.ActivityId > 0) return employeeActivity.ActivityId;
@@ -36,22 +38,23 @@ namespace TechSolutionsLibs.Provider
         }
 
 
-        public IList<EmployeeActivity> GetEmployeeActivities()
+        public IEnumerable<EmployeeActivity> GetEmployeeActivities()
         {
             try
             {
                 var employeeActivities = _iEmployeeActivityDBContext.EmployeeActivity.OrderByDescending(x => x.ActivityId).ToList();
 
+
                 if (ReferenceEquals(employeeActivities, null)) throw new Exception("employeeActivities is null.");
 
                 return employeeActivities;
-
             }
             catch
             {
-                
                 return null;
             }
+          
+
         }
 
        

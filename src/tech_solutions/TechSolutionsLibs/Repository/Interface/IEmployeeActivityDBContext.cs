@@ -1,7 +1,7 @@
 ﻿using TechSolutionsLibs.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace TechSolutionsLibs.Provider
+namespace TechSolutionsLibs.Repository.Interface
 {
     public interface IEmployeeActivityDBContext
     {

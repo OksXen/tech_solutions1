@@ -1,13 +1,15 @@
-﻿using TechSolutionsLibs.Model;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using TechSolutionsLibs.Model;
+using TechSolutionsLibs.Repository.Interface;
 
-namespace TechSolutionsLibs.Provider
+namespace TechSolutionsLibs.Repository
 {
     public class EmployeeActivityDBContext : DbContext, IEmployeeActivityDBContext
     {
         IDBSettings _iDBSettings;
 
         public virtual DbSet<EmployeeActivity> EmployeeActivity { get; set; }
+        
 
         public EmployeeActivityDBContext(IDBSettings dBSettings)
         {

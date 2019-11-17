@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TechSolutionsLibs.Model;
-using TechSolutionsLibs.Provider;
+using TechSolutionsLibs.Repository;
+using TechSolutionsLibs.Repository.Interface;
 using Xunit;
 
 namespace XUnitTestProject1
@@ -56,7 +57,7 @@ namespace XUnitTestProject1
             var employeeActivityDbSet = employeeActivityDBContext.EmployeeActivity;
             employeeActivityDbSet.Add(employeeActivity);
             employeeActivityDBContext.SaveChanges();
-            var result = (EmployeeActivity)employeeActivityDbSet.Where<IEmployeeActivity>(x=> x.FirstName.Equals(employeeActivity.FirstName)).FirstOrDefault();
+            var result = employeeActivityDbSet.Where(x=> x.FirstName.Equals(employeeActivity.FirstName)).FirstOrDefault();
 
             //assert
             Assert.NotEmpty(dBSettings.ConnectionString);

@@ -2,7 +2,7 @@
 
 namespace TechSolutionsLibs.Model
 {
-    public partial  class EmployeeActivity : IEmployeeActivity
+    public partial  class EmployeeActivity 
     {
         [Key]
         public int ActivityId { get; set; }

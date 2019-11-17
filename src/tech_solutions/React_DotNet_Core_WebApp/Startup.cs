@@ -6,7 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SimpleInjector;
-using TechSolutionsLibs.Provider;
+using TechSolutionsLibs.Repository;
+using TechSolutionsLibs.Repository.Interface;
 
 namespace React_DotNet_Core_WebApp
 {
@@ -109,7 +110,7 @@ namespace React_DotNet_Core_WebApp
             //Tech Solutions 
             container.Register<IDBSettings, DBSettings>(Lifestyle.Scoped);
             container.Register<IEmployeeActivityDBContext, EmployeeActivityDBContext>(Lifestyle.Scoped);
-            container.Register<IEmployeeActivityProvider, EmployeeActivityProvider>(Lifestyle.Scoped);
+            container.Register<IEmployeeActivityRepository, EmployeeActivityRepository>(Lifestyle.Scoped);
         }
     }
 }

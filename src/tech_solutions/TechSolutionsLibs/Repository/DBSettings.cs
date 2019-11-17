@@ -1,8 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using TechSolutionsLibs.Provider;
+﻿using Microsoft.Extensions.Configuration;
+using TechSolutionsLibs.Repository.Interface;
 
-namespace TechSolutionsLibs.Provider
+namespace TechSolutionsLibs.Repository
 {
     public class DBSettings : IDBSettings
     {

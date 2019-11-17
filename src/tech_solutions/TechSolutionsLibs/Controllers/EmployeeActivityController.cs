@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using TechSolutionsLibs.Model;
-using TechSolutionsLibs.Provider;
+using TechSolutionsLibs.Repository.Interface;
 
 namespace TechSolutionsLibs.Controllers
 {
@@ -9,40 +11,40 @@ namespace TechSolutionsLibs.Controllers
     [Route("/api/[controller]")]
     public class EmployeeActivityController
     {
-        IEmployeeActivityProvider _employeeActivityProvider;
+        IEmployeeActivityRepository _employeeActivityProvider;
 
-        public EmployeeActivityController(IEmployeeActivityProvider employeeActivityProvider)
+        public EmployeeActivityController(IEmployeeActivityRepository employeeActivityProvider)
         {
             _employeeActivityProvider = employeeActivityProvider;
         }
 
         [HttpGet]
-        public IEnumerable<IEmployeeActivity> Get()
+        public IEnumerable<EmployeeActivity> Get()
         {
-            var array = new EmployeeActivity[0];
-            var employeeActivities = _employeeActivityProvider.GetEmployeeActivities();
+            var array = new EmployeeActivity[0];            
+            var employeeActivities = _employeeActivityProvider.GetEmployeeActivities().ToList();
 
-            if (!ReferenceEquals(employeeActivities, null) && employeeActivities.Count>0) 
+            if (!ReferenceEquals(employeeActivities, null) && employeeActivities.Count > 0)
             {
                 array = new EmployeeActivity[employeeActivities.Count];
                 employeeActivities.CopyTo(array, 0);
-            } 
-            return array;
+            }
+            return employeeActivities.ToArray();
 
         }
 
         [HttpPost]
         [Route("AddEmployeeActivityByForm")]        
-        public int AddEmployeeActivityByForm([FromForm] EmployeeActivity employeeActivity)
+        public async Task<int> AddEmployeeActivityByForm([FromForm] EmployeeActivity employeeActivity)
         {
-            return _employeeActivityProvider.AddEmployee(employeeActivity);            
+            return await _employeeActivityProvider.AddEmployee(employeeActivity);            
         }
         
         [HttpPost]
         [Route("AddEmployeeActivityByBody")]        
-        public int AddEmployeeActivityByBody([FromBody] EmployeeActivity employeeActivity)
+        public async Task<int> AddEmployeeActivityByBody([FromBody] EmployeeActivity employeeActivity)
         {
-            return _employeeActivityProvider.AddEmployee(employeeActivity);            
+            return await _employeeActivityProvider.AddEmployee(employeeActivity);            
         }
     }
 }

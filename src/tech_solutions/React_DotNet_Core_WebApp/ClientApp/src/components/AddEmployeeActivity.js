@@ -7,7 +7,8 @@ export class AddEmployeeActivity extends Component {
         super(props);
         this.state = {            
             errors: {                
-                email: ''
+                email: '',
+                activity:''
             }
         };
 
@@ -18,9 +19,10 @@ export class AddEmployeeActivity extends Component {
     handleChange(event) {
         event.preventDefault();
         const { name, value } = event.target;
+
         let errors = this.state.errors;
         const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
-        
+
         switch (name) {
 
             case 'emailAddress':
@@ -29,6 +31,14 @@ export class AddEmployeeActivity extends Component {
                         ? ''
                         : 'Email is not valid!';
                 
+                this.setState({ errors, [name]: value });
+                break;
+            case 'activityName':
+                errors.activity =
+                    value === "selectempty"
+                        ? 'Please select an activity name'
+                        : '';
+
                 this.setState({ errors, [name]: value });
                 break;
           
@@ -40,12 +50,20 @@ export class AddEmployeeActivity extends Component {
         Object.values(errors).forEach(            
             (val) => val.length > 0 && (valid = false)
         );
+
+        if (this.activityName.value === "selectempty") {
+            let errors = this.state.errors;
+            errors.activity = 'Please select an activity name';
+            this.setState({ errors });
+            return false;
+        }
+
         return valid;
     };
 
     render() {
         const { errors } = this.state;
-        console.log(errors.email);
+        console.log(errors);
         return <div>
           
             <h3>Add Employee Activity</h3>
@@ -76,12 +94,14 @@ export class AddEmployeeActivity extends Component {
                     <label className=" control-label col-md-12" htmlFor="activityName">Activity Name</label>
                     <div className="col-md-4">
                       
-                        <select id="activityName" ref={(input) => this.activityName = input}>
+                        <select id="activityName" name="activityName" onChange={this.handleChange} ref={(input) => this.activityName = input}>
+                            <option value="selectempty">--- Please select activity name ----</option>
                             <option value="Developing in .Net Core ReactJs">Developing in .Net Core ReactJs</option>
                             <option value="Developing in .Net Core Angular">Developing in .Net Core Angular</option>
                             <option value="Developing in .Net Core ReactJs And Redux">Developing in .Net Core ReactJs And Redux</option>
                         </select>
-
+                        {errors.activity.length > 0 &&
+                            <span className="error">{errors.activity}</span>}
 
                     </div>
                 </div >

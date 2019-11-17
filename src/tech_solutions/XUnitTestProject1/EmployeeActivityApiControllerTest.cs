@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using TechSolutionsLibs.Controllers;
 using TechSolutionsLibs.Models;
 using TechSolutionsLibs.Repository;
@@ -7,38 +8,38 @@ using Xunit;
 
 namespace XUnitTestProject1
 {
-    public class EmployeeActivityControllerTest
+    public class EmployeeActivityApiControllerTest
     {
         [Fact]
-        public void IndexTest()
+        public void GetTest()
         {
             //arrange
             DBSettings dBSettings = new DBSettings();
             EmployeeActivityDBContext employeeActivityDBContext = new EmployeeActivityDBContext(dBSettings);
             EmployeeActivityRepository employeeActivityRepository = new EmployeeActivityRepository(employeeActivityDBContext);
-            EmployeeActivityController employeeActivityController = new EmployeeActivityController(employeeActivityRepository);
+            EmployeeActivityApiController employeeActivityController = new EmployeeActivityApiController(employeeActivityRepository);
 
 
             //act
-            var result = employeeActivityController.Index();
+            var result = employeeActivityController.Get();
 
-
+            result.Any();
             //assert
-            var viewResult = Assert.IsType<ViewResult>(result);
+            Assert.NotNull(result);
+            Assert.True(result.Any());
 
         }
-        //AddEmployeeActivity(EmployeeActivityViewModel employeeActivityViewModel)
+
         [Fact]
-        public void AddEmployeeActivityTest()
+        public async void AddEmployeeActivityByFormTest()
         {
             //arrange
             DBSettings dBSettings = new DBSettings();
             EmployeeActivityDBContext employeeActivityDBContext = new EmployeeActivityDBContext(dBSettings);
             EmployeeActivityRepository employeeActivityRepository = new EmployeeActivityRepository(employeeActivityDBContext);
-            EmployeeActivityController employeeActivityController = new EmployeeActivityController(employeeActivityRepository);
-
+            EmployeeActivityApiController employeeActivityController = new EmployeeActivityApiController(employeeActivityRepository);
             var tics = DateTime.Now.Ticks;
-            EmployeeActivityViewModel employeeActivity = new EmployeeActivityViewModel()
+            EmployeeActivity employeeActivity = new EmployeeActivity()
             {
                 FirstName = string.Concat("FName_", tics),
                 LastName = string.Concat("LName_", tics),
@@ -48,13 +49,15 @@ namespace XUnitTestProject1
             };
 
             //act
-            var result = employeeActivityController.AddEmployeeActivity(employeeActivity);
+            var result = await employeeActivityController.AddEmployeeActivityByBody(employeeActivity);
 
 
             //assert
-            var viewResult = Assert.IsType<RedirectToActionResult>(result);
-
+            Assert.NotEqual<int>(0, result);
+            
 
         }
+
+
     }
 }

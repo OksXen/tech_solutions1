@@ -1,9 +1,5 @@
 ﻿import React from 'react';
-import ReactDOM from "react-dom";
 import {  render, unmountComponentAtNode } from "react-dom";
-import { act } from "react-dom/test-utils";
-import { MemoryRouter } from 'react-router-dom';
-import FetchEmployeeActivity from './FetchEmployeeActivity';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow } from 'enzyme';

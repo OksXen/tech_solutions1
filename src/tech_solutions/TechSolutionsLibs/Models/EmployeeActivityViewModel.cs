@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace TechSolutionsLibs.Models
 {
@@ -9,14 +7,17 @@ namespace TechSolutionsLibs.Models
         [Key]
         public int ActivityId { get; set; }
 
+
         [Required]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
+
 
         [Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
+        
         [Required]
         [EmailAddress]
         [Display(Name = "Email Address")]
@@ -24,8 +25,9 @@ namespace TechSolutionsLibs.Models
 
         [Required(ErrorMessage ="Please select activity")]
         [Display(Name = "Activity Name")]
-        public string ActivityName { get; set; } 
+        public string ActivityName { get; set; }
 
+  
         [Required]
         [Display(Name = "Comments")]
         public string Comments { get; set; }

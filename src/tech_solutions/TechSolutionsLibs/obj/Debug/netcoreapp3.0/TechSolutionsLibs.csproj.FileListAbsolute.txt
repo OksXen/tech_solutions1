@@ -1,9 +1,9 @@
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLibs\bin\Debug\netcoreapp3.0\TechSolutionsLibs.deps.json
+D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLibs\bin\Debug\netcoreapp3.0\TechSolutionsLibs.runtimeconfig.json
+D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLibs\bin\Debug\netcoreapp3.0\TechSolutionsLibs.runtimeconfig.dev.json
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLibs\bin\Debug\netcoreapp3.0\TechSolutionsLibs.dll
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLibs\bin\Debug\netcoreapp3.0\TechSolutionsLibs.pdb
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLibs\obj\Debug\netcoreapp3.0\TechSolutionsLibs.AssemblyInfoInputs.cache
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLibs\obj\Debug\netcoreapp3.0\TechSolutionsLibs.AssemblyInfo.cs
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLibs\obj\Debug\netcoreapp3.0\TechSolutionsLibs.dll
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLibs\obj\Debug\netcoreapp3.0\TechSolutionsLibs.pdb
-D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLibs\bin\Debug\netcoreapp3.0\TechSolutionsLibs.runtimeconfig.json
-D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLibs\bin\Debug\netcoreapp3.0\TechSolutionsLibs.runtimeconfig.dev.json

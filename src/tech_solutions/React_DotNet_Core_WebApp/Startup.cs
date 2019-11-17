@@ -5,16 +5,23 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SimpleInjector;
+using TechSolutionsLibs.Provider;
 
 namespace React_DotNet_Core_WebApp
 {
     public class Startup
     {
+
+
+
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
+        private Container container = new Container();
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -28,6 +35,21 @@ namespace React_DotNet_Core_WebApp
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+
+            #region Simple Injector reference: https://simpleinjector.readthedocs.io/en/latest/aspnetintegration.html
+            //enable .net core simpleinjector
+            services.AddSimpleInjector(container, options =>
+            {                             
+                options.AddAspNetCore()                    
+                    .AddControllerActivation()
+                    .AddViewComponentActivation()
+                    .AddPageModelActivation()
+                    .AddTagHelperActivation();
+            });
+            #endregion Simple Injector
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +70,20 @@ namespace React_DotNet_Core_WebApp
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
+            #region Simple Injector reference: https://simpleinjector.readthedocs.io/en/latest/aspnetintegration.html
+
+            app.UseSimpleInjector(container, options =>
+            {
+                options.UseLogging();
+            });
+
+
+            InitializeContainer();
+
+            // Always verify the container
+            container.Verify();
+            #endregion
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
@@ -66,6 +102,14 @@ namespace React_DotNet_Core_WebApp
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
+        }
+
+        private void InitializeContainer()
+        {            
+            //Tech Solutions 
+            container.Register<IDBSettings, DBSettings>(Lifestyle.Scoped);
+            container.Register<IEmployeeActivityDBContext, EmployeeActivityDBContext>(Lifestyle.Scoped);
+            container.Register<IEmployeeActivityProvider, EmployeeActivityProvider>(Lifestyle.Scoped);
         }
     }
 }

@@ -4,21 +4,31 @@ using System.Linq;
 
 namespace TechSolutionsLibs.Provider
 {
-    public class EmployeeActivityProvider
+    public class EmployeeActivityProvider : IEmployeeActivityProvider
     {
-        ActivityDBContext activityDBContext;
+        //ActivityDBContext activityDBContext;
 
-        public EmployeeActivityProvider(ActivityDBContext dBContext)
+        //public EmployeeActivityProvider(ActivityDBContext dBContext)
+        //{
+        //    activityDBContext = dBContext;
+        //}
+
+        IEmployeeActivityDBContext _iEmployeeActivityDBContext;
+
+        public EmployeeActivityProvider(IEmployeeActivityDBContext employeeActivityDBContext)
         {
-            activityDBContext = dBContext;
+            _iEmployeeActivityDBContext = employeeActivityDBContext;
         }
 
         public int AddEmployee(EmployeeActivity employeeActivity)
         {
             try
             {
-                activityDBContext.EmployeeActivity.Add(employeeActivity);
-                activityDBContext.SaveChanges();
+                //activityDBContext.EmployeeActivity.Add(employeeActivity);
+                //activityDBContext.SaveChanges();
+                _iEmployeeActivityDBContext.EmployeeActivity.Add(employeeActivity);
+                _iEmployeeActivityDBContext.SaveChanges();
+                _iEmployeeActivityDBContext.SaveChanges();
                 return 1;
             }
             catch
@@ -31,8 +41,9 @@ namespace TechSolutionsLibs.Provider
         {
             try
             {
-                return activityDBContext.EmployeeActivity.OrderByDescending(x=> x.ActivityId).ToList();
-                                
+                //return activityDBContext.EmployeeActivity.OrderByDescending(x=> x.ActivityId).ToList();
+                return _iEmployeeActivityDBContext.EmployeeActivity.OrderByDescending(x => x.ActivityId).ToList();
+
             }
             catch
             {

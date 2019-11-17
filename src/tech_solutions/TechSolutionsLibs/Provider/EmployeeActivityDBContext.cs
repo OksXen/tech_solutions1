@@ -3,19 +3,29 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TechSolutionsLibs.Provider
 {
-    public partial class ActivityDBContext : DbContext
+    public class EmployeeActivityDBContext : DbContext, IEmployeeActivityDBContext
     {
+        IDBSettings _iDBSettings;
+
         public virtual DbSet<EmployeeActivity> EmployeeActivity { get; set; }
 
-        public ActivityDBContext(DbContextOptions options) : base(options) { }
+        public EmployeeActivityDBContext(IDBSettings dBSettings)
+        {
+            _iDBSettings = dBSettings;
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //if (!optionsBuilder.IsConfigured)
-            //{
+            if (!optionsBuilder.IsConfigured)
+            {
+                // optionsBuilder.UseSqlServer(@"Data Source=tcp:s19.winhost.com;Initial Catalog=DB_127750_activity;User ID=DB_127750_activity_user;Password=th8uxgWBLf8M;Integrated Security=False;");
+                optionsBuilder.UseSqlServer(_iDBSettings.ConnectionString);
+            }
+        }
 
-            //    optionsBuilder.UseSqlServer(@"Data Source=tcp:s19.winhost.com;Initial Catalog=DB_127750_activity;User ID=DB_127750_activity_user;Password=th8uxgWBLf8M;Integrated Security=False;");
-            //}
+        public void SaveChanges()
+        {
+            base.SaveChanges();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -25,7 +35,7 @@ namespace TechSolutionsLibs.Provider
 
                 entity.Property(e => e.FirstName)
                    .HasMaxLength(50)
-                   .IsUnicode(false);                
+                   .IsUnicode(false);
 
                 entity.Property(e => e.LastName)
                    .HasMaxLength(50)
@@ -44,7 +54,7 @@ namespace TechSolutionsLibs.Provider
                    .IsUnicode(false);
             });
 
-           
+
         }
     }
 }

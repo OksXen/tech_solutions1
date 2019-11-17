@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using TechSolutionsLibs.Helper;
 using TechSolutionsLibs.Model;
+using TechSolutionsLibs.Provider;
 
 namespace TechSolutionsLibs.Controllers
 {
@@ -9,32 +9,32 @@ namespace TechSolutionsLibs.Controllers
     [Route("/api/[controller]")]
     public class EmployeeActivityController
     {
-        public EmployeeActivityController()
+        IEmployeeActivityProvider _employeeActivityProvider;
+
+        public EmployeeActivityController(IEmployeeActivityProvider employeeActivityProvider)
         {
-            
+            _employeeActivityProvider = employeeActivityProvider;
         }
 
         [HttpGet]
         public IEnumerable<EmployeeActivity> Get()
         {
 
-            return EmployeeActivityHelper.GetEmployeeActivities().ToArray();
-
-            
+            return _employeeActivityProvider.GetEmployeeActivities().ToArray();           
         }
 
         [HttpPost]
         [Route("AddEmployeeActivityByForm")]        
         public int AddEmployeeActivityByForm([FromForm] EmployeeActivity employeeActivity)
         {
-            return EmployeeActivityHelper.AddEmployeeActivity(employeeActivity);
+            return _employeeActivityProvider.AddEmployee(employeeActivity);            
         }
         
         [HttpPost]
         [Route("AddEmployeeActivityByBody")]        
         public int AddEmployeeActivityByBody([FromBody] EmployeeActivity employeeActivity)
         {
-            return EmployeeActivityHelper.AddEmployeeActivity(employeeActivity);
+            return _employeeActivityProvider.AddEmployee(employeeActivity);            
         }
     }
 }

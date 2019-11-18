@@ -10317,11 +10317,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\temp\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\XUnitTestProject1.csproj",
+      "projectUniqueName": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\XUnitTestProject1.csproj",
       "projectName": "XUnitTestProject1",
-      "projectPath": "D:\\temp\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\XUnitTestProject1.csproj",
+      "projectPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\XUnitTestProject1.csproj",
       "packagesPath": "D:\\Users\\fcodi\\.nuget\\packages\\",
-      "outputPath": "D:\\temp\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\obj\\",
+      "outputPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\XUnitTestProject1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -10341,8 +10341,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "D:\\temp\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj": {
-              "projectPath": "D:\\temp\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj"
+            "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj": {
+              "projectPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj"
             }
           }
         }

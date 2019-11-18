@@ -9320,11 +9320,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\temp\\tech_solutions1\\src\\tech_solutions\\dotnet_core_mvc_web_app\\dotnet_core_mvc_web_app.csproj",
+      "projectUniqueName": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\dotnet_core_mvc_web_app\\dotnet_core_mvc_web_app.csproj",
       "projectName": "dotnet_core_mvc_web_app",
-      "projectPath": "D:\\temp\\tech_solutions1\\src\\tech_solutions\\dotnet_core_mvc_web_app\\dotnet_core_mvc_web_app.csproj",
+      "projectPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\dotnet_core_mvc_web_app\\dotnet_core_mvc_web_app.csproj",
       "packagesPath": "D:\\Users\\fcodi\\.nuget\\packages\\",
-      "outputPath": "D:\\temp\\tech_solutions1\\src\\tech_solutions\\dotnet_core_mvc_web_app\\obj\\",
+      "outputPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\dotnet_core_mvc_web_app\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -9344,8 +9344,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "D:\\temp\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj": {
-              "projectPath": "D:\\temp\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj"
+            "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj": {
+              "projectPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj"
             }
           }
         }

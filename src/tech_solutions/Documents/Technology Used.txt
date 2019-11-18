@@ -1,0 +1,16 @@
+Technology Used:
+
+.NET Core 3.0
+ASP.NET Core Angular v8.2.14
+ASP.NET Core MVC Razor v2
+ASP.NET Core ReactJs v 16.8.6
+Dapper v2.0.30
+Microsoft Entity Framework SQL Server - DbContext v3
+Microsoft Caching v. 3
+Simple Injector MVC v4.7.2
+Typescript v3.6.4
+Angular CLI 8.3.19
+Jasmin v3.5.0
+Enzyme v3.10.0
+Jest v24.9.0
+xUnit

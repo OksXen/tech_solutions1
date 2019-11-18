@@ -35,11 +35,17 @@ export class NavMenu extends Component {
                         </NavItem>
                         <NavItem>
                             <NavLink tag={Link} className="text-dark" to="/add-employee-activity">Activity sign up form</NavLink>
-                        </NavItem>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink tag={Link} className="text-dark" to="/add-employee-activity-by-dapper">Activity sign up form by dapper</NavLink>
+                            </NavItem>
                 <NavItem>
                     <NavLink tag={Link} className="text-dark" to="/fetch-employee-activity">Interested Persons Listing</NavLink>
-                </NavItem>
-               
+                            </NavItem>
+                            <NavItem>
+                                <NavLink tag={Link} className="text-dark" to="/fetch-employee-activity-by-dapper">Interested Persons Listing by Dapper</NavLink>
+                            </NavItem>
+              
               </ul>
             </Collapse>
           </Container>

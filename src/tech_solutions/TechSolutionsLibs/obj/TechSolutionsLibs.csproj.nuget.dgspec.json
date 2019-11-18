@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj": {}
+    "D:\\temp\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj": {}
   },
   "projects": {
-    "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj": {
+    "D:\\temp\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj",
+        "projectUniqueName": "D:\\temp\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj",
         "projectName": "TechSolutionsLibs",
-        "projectPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj",
+        "projectPath": "D:\\temp\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\TechSolutionsLibs.csproj",
         "packagesPath": "D:\\Users\\fcodi\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\fcodi\\source\\Github\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\obj\\",
+        "outputPath": "D:\\temp\\tech_solutions1\\src\\tech_solutions\\TechSolutionsLibs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,0 +1,26 @@
+<h1>Employee Activity List</h1>
+
+<p *ngIf="!employeeActivitylist"><em>Loading...</em></p>
+
+<table class='table table-bordered' *ngIf="employeeActivitylist">
+  <thead style="background-color:green;font-weight:bold;color:white;">
+    <tr>
+      <th>Activity Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Emailaddress</th>
+      <th>Activity Name</th>
+      <th>Comments</th>      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employeeActivitylist">
+      <td>{{ emp.activityId }}</td>
+      <td>{{ emp.firstName }}</td>
+      <td>{{ emp.lastName }}</td>
+      <td>{{ emp.emailAddress }}</td>
+      <td>{{ emp.activityName }}</td>
+      <td>{{ emp.comments }}</td>
+    </tr>
+  </tbody>
+</table>

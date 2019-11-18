@@ -14,9 +14,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		Database Connection Issues.txt = Database Connection Issues.txt
 		Documents\How to run reactjs test.txt = Documents\How to run reactjs test.txt
 		Issues debugging React.txt = Issues debugging React.txt
+		Three Diff Types of Applications.txt = Three Diff Types of Applications.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet_core_mvc_web_app", "dotnet_core_mvc_web_app\dotnet_core_mvc_web_app.csproj", "{517F8F1F-4C65-4E97-95A0-A8236A031376}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet_core_mvc_web_app", "dotnet_core_mvc_web_app\dotnet_core_mvc_web_app.csproj", "{517F8F1F-4C65-4E97-95A0-A8236A031376}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angular_WebApplication", "Angular_WebApplication\Angular_WebApplication.csproj", "{040C06FD-63AC-408E-AED3-47038B046383}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +43,10 @@ Global
 		{517F8F1F-4C65-4E97-95A0-A8236A031376}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{517F8F1F-4C65-4E97-95A0-A8236A031376}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{517F8F1F-4C65-4E97-95A0-A8236A031376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{040C06FD-63AC-408E-AED3-47038B046383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{040C06FD-63AC-408E-AED3-47038B046383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{040C06FD-63AC-408E-AED3-47038B046383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{040C06FD-63AC-408E-AED3-47038B046383}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

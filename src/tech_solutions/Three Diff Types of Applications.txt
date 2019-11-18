@@ -1,0 +1,8 @@
+
+
+There are three different types of applicaitons in the solution. They are all written within .NET Core 
+
+1. ReactJs - Single Application Page
+2. .NET Core MVC Razor
+3. Angular
+

@@ -4,13 +4,13 @@ using TechSolutionsLibs.Repository.Interface;
 
 namespace TechSolutionsLibs.Controllers
 {
-    public class EmployeeActivityController : Controller
+    public class EmployeeActivityByDapperController : Controller
     {
         
-        IEmployeeActivityRepository _employeeActivityProvider;
+        IEmployeeActivityByDapperRepository _employeeActivityProvider;
 
 
-        public EmployeeActivityController(IEmployeeActivityRepository employeeActivityProvider)
+        public EmployeeActivityByDapperController(IEmployeeActivityByDapperRepository employeeActivityProvider)
         {
             _employeeActivityProvider = employeeActivityProvider;
         }

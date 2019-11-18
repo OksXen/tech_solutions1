@@ -70,3 +70,5 @@ D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\dotnet_core_mvc_web_app.MvcApplicationPartsAssemblyInfo.cache
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\Razor\Views\EmployeeActivity\InterestedPersonListings.cshtml.g.cs
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\bin\Debug\netcoreapp3.0\Dapper.dll
+D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\Razor\Views\EmployeeActivityByDapper\Index.cshtml.g.cs
+D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\dotnet_core_mvc_web_app\obj\Debug\netcoreapp3.0\Razor\Views\EmployeeActivityByDapper\InterestedPersonListings.cshtml.g.cs

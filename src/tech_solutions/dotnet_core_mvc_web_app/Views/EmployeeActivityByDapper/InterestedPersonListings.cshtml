@@ -1,0 +1,45 @@
+﻿@using TechSolutionsLibs.Models;
+@using System.Linq;
+
+@{
+    ViewData["Title"] = "Employee Activity Controller";
+    IEnumerable<EmployeeActivity> employeeActivities = ViewData["employeeActivities"] as IEnumerable<EmployeeActivity> ;
+
+  
+
+}
+
+<div class="text-left">
+    <div>
+        <h1>Interested Person Listings By Dapper</h1>        
+
+        <table class='table' aria-labelledby="tabelLabel">
+
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Activity Name</th>
+                    <th scope="col">Comments</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (EmployeeActivity item in employeeActivities)
+                {
+                    <tr>
+                        <td>@item.ActivityId</td>
+                        <td>@item.FirstName</td>
+                        <td>@item.LastName</td>
+                        <td>@item.EmailAddress</td>
+                        <td>@item.ActivityName</td>
+                        <td>@item.Comments</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

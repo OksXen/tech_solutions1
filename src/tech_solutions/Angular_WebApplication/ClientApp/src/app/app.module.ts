@@ -3,13 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { HeroFormComponent } from './hero-form/hero-form.component';
 import { AddEmployeeActivityFormComponent } from './add-employee-activity-form/add-employee-activity-form.component';
 import { EmployeeActivityService } from './services/employee-activity-service';
 import {HttpModule} from '@angular/http';
@@ -19,11 +15,8 @@ import { EmployeeActivityComponent } from './employee-activity/employee-activity
     declarations: [
     AppComponent,
     NavMenuComponent,
-    HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
-        HeroFormComponent
-        , AddEmployeeActivityFormComponent, EmployeeActivityComponent
+        HomeComponent,
+        AddEmployeeActivityFormComponent, EmployeeActivityComponent
       
 
   ],
@@ -34,10 +27,7 @@ import { EmployeeActivityComponent } from './employee-activity/employee-activity
       FormsModule,
       ReactiveFormsModule,      
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-        { path: 'fetch-data', component: FetchDataComponent },
-        { path: 'hero-form', component: HeroFormComponent }
+      { path: '', component: HomeComponent, pathMatch: 'full' }        
         , { path: 'add-employee-activity', component: AddEmployeeActivityFormComponent }
         , { path: 'employee-activity', component: EmployeeActivityComponent }
     ])

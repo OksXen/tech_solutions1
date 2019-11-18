@@ -13,7 +13,7 @@ using TechSolutionsLibs.Repository.Interface;
 
 namespace TechSolutionsLibs.Repository
 {
-    public class EmployeeActivityByDapperRepository: IEmployeeActivityRepository
+    public class EmployeeActivityByDapperRepository: IEmployeeActivityByDapperRepository
     {
         IDBSettings _dBSettings;
 
@@ -22,7 +22,7 @@ namespace TechSolutionsLibs.Repository
             _dBSettings = dBSettings;
         }
 
-        public async Task<int> AddEmployee(EmployeeActivity employeeActivity)
+        public int AddEmployee(EmployeeActivity employeeActivity)
         {
             try
             {

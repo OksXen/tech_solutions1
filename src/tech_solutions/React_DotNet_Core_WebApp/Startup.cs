@@ -110,6 +110,7 @@ namespace React_DotNet_Core_WebApp
             container.Register<IDBSettings, DBSettings>(Lifestyle.Scoped);
             container.Register<IEmployeeActivityDBContext, EmployeeActivityDBContext>(Lifestyle.Scoped);
             container.Register<IEmployeeActivityRepository, EmployeeActivityRepository>(Lifestyle.Scoped);
+            container.Register<IEmployeeActivityByDapperRepository, EmployeeActivityByDapperRepository>(Lifestyle.Scoped);
         }
     }
 }

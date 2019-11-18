@@ -13,7 +13,7 @@ namespace XUnitTestProject1
         /// ensures add employee returns identity id
         /// </summary>
         [Fact]
-        public async void AddEmployeeTest()
+        public void AddEmployeeTest()
         {
             //arrange
             IDBSettings dBSettings = new DBSettings();
@@ -31,7 +31,7 @@ namespace XUnitTestProject1
             };
 
             //act
-            var result = await employeeActivityProvider.AddEmployee(employeeActivity);
+            var result = employeeActivityProvider.AddEmployee(employeeActivity);
 
             //assert
             Assert.NotEmpty(dBSettings.ConnectionString);

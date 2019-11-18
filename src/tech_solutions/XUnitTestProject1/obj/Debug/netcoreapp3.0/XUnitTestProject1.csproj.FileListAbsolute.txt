@@ -184,3 +184,4 @@ D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\XUnitTestProject
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\XUnitTestProject1\bin\Debug\netcoreapp3.0\XUnitTestProject1.runtimeconfig.dev.json
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\XUnitTestProject1\bin\Debug\netcoreapp3.0\XUnitTestProject1.pdb
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\XUnitTestProject1\obj\Debug\netcoreapp3.0\XUnitTestProject1.csproj.CopyComplete
+D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\XUnitTestProject1\bin\Debug\netcoreapp3.0\Dapper.dll

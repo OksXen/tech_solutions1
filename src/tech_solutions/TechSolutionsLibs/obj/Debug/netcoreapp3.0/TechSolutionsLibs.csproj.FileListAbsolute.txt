@@ -8,3 +8,13 @@ D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLib
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLibs\obj\Debug\netcoreapp3.0\TechSolutionsLibs.dll
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLibs\obj\Debug\netcoreapp3.0\TechSolutionsLibs.pdb
 D:\Users\fcodi\source\Github\tech_solutions1\src\tech_solutions\TechSolutionsLibs\obj\Debug\netcoreapp3.0\TechSolutionsLibs.csprojAssemblyReference.cache
+D:\temp\tech_solutions1\src\tech_solutions\TechSolutionsLibs\bin\Debug\netcoreapp3.0\TechSolutionsLibs.deps.json
+D:\temp\tech_solutions1\src\tech_solutions\TechSolutionsLibs\bin\Debug\netcoreapp3.0\TechSolutionsLibs.runtimeconfig.json
+D:\temp\tech_solutions1\src\tech_solutions\TechSolutionsLibs\bin\Debug\netcoreapp3.0\TechSolutionsLibs.runtimeconfig.dev.json
+D:\temp\tech_solutions1\src\tech_solutions\TechSolutionsLibs\bin\Debug\netcoreapp3.0\TechSolutionsLibs.dll
+D:\temp\tech_solutions1\src\tech_solutions\TechSolutionsLibs\bin\Debug\netcoreapp3.0\TechSolutionsLibs.pdb
+D:\temp\tech_solutions1\src\tech_solutions\TechSolutionsLibs\obj\Debug\netcoreapp3.0\TechSolutionsLibs.csprojAssemblyReference.cache
+D:\temp\tech_solutions1\src\tech_solutions\TechSolutionsLibs\obj\Debug\netcoreapp3.0\TechSolutionsLibs.AssemblyInfoInputs.cache
+D:\temp\tech_solutions1\src\tech_solutions\TechSolutionsLibs\obj\Debug\netcoreapp3.0\TechSolutionsLibs.AssemblyInfo.cs
+D:\temp\tech_solutions1\src\tech_solutions\TechSolutionsLibs\obj\Debug\netcoreapp3.0\TechSolutionsLibs.dll
+D:\temp\tech_solutions1\src\tech_solutions\TechSolutionsLibs\obj\Debug\netcoreapp3.0\TechSolutionsLibs.pdb

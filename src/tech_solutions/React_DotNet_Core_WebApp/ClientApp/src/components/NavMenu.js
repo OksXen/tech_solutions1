@@ -26,7 +26,7 @@ export class NavMenu extends Component {
       <header>
         <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" light>
           <Container>
-            <NavbarBrand tag={Link} to="/">Acme Widget Company</NavbarBrand>
+            <NavbarBrand tag={Link} to="/">ReactJs Web App</NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
               <ul className="navbar-nav flex-grow">
@@ -34,10 +34,10 @@ export class NavMenu extends Component {
                 <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink tag={Link} className="text-dark" to="/add-employee-activity">Activity sign up form</NavLink>
+                            <NavLink tag={Link} className="text-dark" to="/add-employee-activity">Sign up form</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag={Link} className="text-dark" to="/add-employee-activity-by-dapper">Activity sign up form by dapper</NavLink>
+                                <NavLink tag={Link} className="text-dark" to="/add-employee-activity-by-dapper">Sign up form by dapper</NavLink>
                             </NavItem>
                 <NavItem>
                     <NavLink tag={Link} className="text-dark" to="/fetch-employee-activity">Interested Persons Listing</NavLink>

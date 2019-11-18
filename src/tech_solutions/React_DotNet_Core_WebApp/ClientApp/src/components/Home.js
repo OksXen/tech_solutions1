@@ -6,7 +6,7 @@ export class Home extends Component {
   render () {
     return (
       <div>
-        <h1>Acme Widget Company!</h1>
+        <h1>Acme Widget Company</h1>
         <p>Welcome to a single-page application</p>
             <ul>
                 <li><a href='/add-employee-activity'>Click here for Activity sing up form</a></li>   

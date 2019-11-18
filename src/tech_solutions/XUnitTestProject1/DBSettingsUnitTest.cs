@@ -1,5 +1,5 @@
-﻿using TechSolutionsLibs.Repository;
-using TechSolutionsLibs.Repository.Interface;
+﻿using TechSolutionsLibs.Settings;
+using TechSolutionsLibs.Settings.Interface;
 using Xunit;
 
 namespace XUnitTestProject1

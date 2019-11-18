@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TechSolutionsLibs.Models;
-using TechSolutionsLibs.Repository.Interface;
+using TechSolutionsLibs.Settings.Interface;
 
 namespace TechSolutionsLibs.Controllers
 {
@@ -11,11 +12,12 @@ namespace TechSolutionsLibs.Controllers
     [Route("/api/[controller]")]
     public class EmployeeActivityApiController
     {
-        IEmployeeActivityRepository _employeeActivityProvider;
+        IEmployeeActivityRepository _employeeActivityProvider;        
 
         public EmployeeActivityApiController(IEmployeeActivityRepository employeeActivityProvider)
         {
             _employeeActivityProvider = employeeActivityProvider;
+            
         }
 
         [HttpGet]

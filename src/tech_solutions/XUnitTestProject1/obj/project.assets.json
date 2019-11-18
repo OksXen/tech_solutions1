@@ -3472,6 +3472,7 @@
           "Dapper": "2.0.30",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0",
+          "Microsoft.Extensions.Caching.Memory": "3.0.0",
           "Microsoft.Extensions.Configuration.Json": "3.0.0"
         },
         "compile": {
@@ -10301,6 +10302,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "Microsoft.EntityFrameworkCore >= 3.0.0",
+      "Microsoft.Extensions.Caching.Memory >= 3.0.0",
       "Microsoft.Extensions.Configuration >= 3.0.0",
       "Microsoft.Extensions.Configuration.Json >= 3.0.0",
       "Microsoft.NET.Test.Sdk >= 16.2.0",
@@ -10357,6 +10359,10 @@
       "netcoreapp3.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          },
+          "Microsoft.Extensions.Caching.Memory": {
             "target": "Package",
             "version": "[3.0.0, )"
           },

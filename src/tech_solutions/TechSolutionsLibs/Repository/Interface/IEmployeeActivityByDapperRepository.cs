@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using TechSolutionsLibs.Models;
 
-namespace TechSolutionsLibs.Repository.Interface
+namespace TechSolutionsLibs.Settings.Interface
 {
     public interface IEmployeeActivityByDapperRepository
     {

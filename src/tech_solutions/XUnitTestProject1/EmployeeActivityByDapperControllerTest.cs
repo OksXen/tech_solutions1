@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using System;
 using TechSolutionsLibs.Controllers;
 using TechSolutionsLibs.Models;
-using TechSolutionsLibs.Repository;
+using TechSolutionsLibs.Settings;
 using Xunit;
+using XUnitTestProject1.Helper;
 
 namespace XUnitTestProject1
 {
@@ -14,8 +16,10 @@ namespace XUnitTestProject1
         {
             //arrange
             DBSettings dBSettings = new DBSettings();
-            
-            EmployeeActivityByDapperRepository employeeActivityRepository = new EmployeeActivityByDapperRepository(dBSettings);
+
+            IMemoryCache memoryCache = MemoryCacheHelper.GetMemoryCache();
+            CacheSettings cacheSettings = new CacheSettings();
+            EmployeeActivityByDapperRepository employeeActivityRepository = new EmployeeActivityByDapperRepository(dBSettings, memoryCache, cacheSettings);
             EmployeeActivityByDapperController employeeActivityController = new EmployeeActivityByDapperController(employeeActivityRepository);
 
 
@@ -33,7 +37,9 @@ namespace XUnitTestProject1
         {
             //arrange
             DBSettings dBSettings = new DBSettings();
-            EmployeeActivityByDapperRepository employeeActivityRepository = new EmployeeActivityByDapperRepository(dBSettings);
+            IMemoryCache memoryCache = MemoryCacheHelper.GetMemoryCache();
+            CacheSettings cacheSettings = new CacheSettings();
+            EmployeeActivityByDapperRepository employeeActivityRepository = new EmployeeActivityByDapperRepository(dBSettings, memoryCache, cacheSettings);
             EmployeeActivityByDapperController employeeActivityController = new EmployeeActivityByDapperController(employeeActivityRepository);
 
             var tics = DateTime.Now.Ticks;

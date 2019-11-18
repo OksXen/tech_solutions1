@@ -12,3 +12,6 @@ src/tech_solutions/TechSolutionsLibs/obj/TechSolutionsLibs.csproj.nuget.cache
 *.cache
 *.cache
 *.pdb
+src/tech_solutions/XUnitTestProject1/obj/XUnitTestProject1.csproj.nuget.dgspec.json
+*.cache
+src/tech_solutions/XUnitTestProject1/obj/project.assets.json

@@ -5,8 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SimpleInjector;
-using TechSolutionsLibs.Repository;
-using TechSolutionsLibs.Repository.Interface;
+using TechSolutionsLibs.Settings;
+using TechSolutionsLibs.Settings.Interface;
 
 namespace Angular_WebApplication
 {
@@ -110,6 +110,7 @@ namespace Angular_WebApplication
             container.Register<IEmployeeActivityDBContext, EmployeeActivityDBContext>(Lifestyle.Scoped);
             container.Register<IEmployeeActivityRepository, EmployeeActivityRepository>(Lifestyle.Scoped);
             container.Register<IEmployeeActivityByDapperRepository, EmployeeActivityByDapperRepository>(Lifestyle.Scoped);
+            container.Register<ICacheSettings, CacheSettings>(Lifestyle.Scoped);
         }
     }
 }

@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Microsoft.Extensions.Caching.Memory;
+using System;
 using System.Linq;
 using TechSolutionsLibs.Models;
-using TechSolutionsLibs.Repository;
-using TechSolutionsLibs.Repository.Interface;
+using TechSolutionsLibs.Settings;
+using TechSolutionsLibs.Settings.Interface;
 using Xunit;
+using XUnitTestProject1.Helper;
 
 namespace XUnitTestProject1
 {
@@ -17,8 +19,9 @@ namespace XUnitTestProject1
         {
             //arrange
             IDBSettings dBSettings = new DBSettings();
-            
-            EmployeeActivityByDapperRepository employeeActivityProvider = new EmployeeActivityByDapperRepository(dBSettings);
+            IMemoryCache memoryCache = MemoryCacheHelper.GetMemoryCache();
+            CacheSettings cacheSettings = new CacheSettings();
+            EmployeeActivityByDapperRepository employeeActivityProvider = new EmployeeActivityByDapperRepository(dBSettings, memoryCache, cacheSettings);
 
             var tics = DateTime.Now.Ticks;
             EmployeeActivity employeeActivity = new EmployeeActivity()
@@ -49,7 +52,9 @@ namespace XUnitTestProject1
         {
             //arrange
             IDBSettings dBSettings = new DBSettings();
-            EmployeeActivityByDapperRepository employeeActivityProvider = new EmployeeActivityByDapperRepository(dBSettings);
+            IMemoryCache memoryCache = MemoryCacheHelper.GetMemoryCache();
+            CacheSettings cacheSettings = new CacheSettings();
+            EmployeeActivityByDapperRepository employeeActivityProvider = new EmployeeActivityByDapperRepository(dBSettings, memoryCache, cacheSettings);
 
             //act
             var result = employeeActivityProvider.GetEmployeeActivities().ToList();

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TechSolutionsLibs.Models;
-using TechSolutionsLibs.Repository.Interface;
+using TechSolutionsLibs.Settings.Interface;
 
 namespace TechSolutionsLibs.Controllers
 {

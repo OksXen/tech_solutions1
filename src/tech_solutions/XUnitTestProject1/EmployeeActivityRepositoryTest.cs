@@ -1,13 +1,15 @@
-﻿using System;
+﻿using Microsoft.Extensions.Caching.Memory;
+using System;
 using System.Linq;
 using TechSolutionsLibs.Models;
-using TechSolutionsLibs.Repository;
-using TechSolutionsLibs.Repository.Interface;
+using TechSolutionsLibs.Settings;
+using TechSolutionsLibs.Settings.Interface;
 using Xunit;
+using XUnitTestProject1.Helper;
 
 namespace XUnitTestProject1
 {
-    public class EmployeeActivityProviderTest
+    public class EmployeeActivityRepositoryTest
     {
         /// <summary>
         /// ensures add employee returns identity id
@@ -17,8 +19,10 @@ namespace XUnitTestProject1
         {
             //arrange
             IDBSettings dBSettings = new DBSettings();
+            IMemoryCache memoryCache = MemoryCacheHelper.GetMemoryCache();
+            CacheSettings cacheSettings = new CacheSettings();
             IEmployeeActivityDBContext employeeActivityDBContext = new EmployeeActivityDBContext(dBSettings);
-            IEmployeeActivityRepository employeeActivityProvider = new EmployeeActivityRepository(employeeActivityDBContext);
+            IEmployeeActivityRepository employeeActivityProvider = new EmployeeActivityRepository(employeeActivityDBContext, memoryCache, cacheSettings);
 
             var tics = DateTime.Now.Ticks;
             EmployeeActivity employeeActivity = new EmployeeActivity()
@@ -49,8 +53,10 @@ namespace XUnitTestProject1
         {
             //arrange
             IDBSettings dBSettings = new DBSettings();
+            IMemoryCache memoryCache = MemoryCacheHelper.GetMemoryCache();
+            CacheSettings cacheSettings = new CacheSettings();
             IEmployeeActivityDBContext employeeActivityDBContext = new EmployeeActivityDBContext(dBSettings);
-            IEmployeeActivityRepository employeeActivityProvider = new EmployeeActivityRepository(employeeActivityDBContext);
+            IEmployeeActivityRepository employeeActivityProvider = new EmployeeActivityRepository(employeeActivityDBContext, memoryCache, cacheSettings);
 
             //act
             var result = employeeActivityProvider.GetEmployeeActivities().ToList();

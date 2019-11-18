@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using TechSolutionsLibs.Models;
 
-namespace TechSolutionsLibs.Repository.Interface
+namespace TechSolutionsLibs.Settings.Interface
 {
     public interface IEmployeeActivityRepository
     {

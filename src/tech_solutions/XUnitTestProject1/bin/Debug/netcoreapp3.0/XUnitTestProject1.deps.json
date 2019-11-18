@@ -9,6 +9,7 @@
       "XUnitTestProject1/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "3.0.0",
+          "Microsoft.Extensions.Caching.Memory": "3.0.0",
           "Microsoft.Extensions.Configuration": "3.0.0",
           "Microsoft.Extensions.Configuration.Json": "3.0.0",
           "Microsoft.NET.Test.Sdk": "16.2.0",
@@ -2511,6 +2512,7 @@
           "Dapper": "2.0.30",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0",
+          "Microsoft.Extensions.Caching.Memory": "3.0.0",
           "Microsoft.Extensions.Configuration.Json": "3.0.0"
         },
         "runtime": {

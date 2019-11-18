@@ -1,22 +1,33 @@
-﻿using System;
+﻿using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TechSolutionsLibs.Controllers;
 using TechSolutionsLibs.Models;
-using TechSolutionsLibs.Repository;
+using TechSolutionsLibs.Settings;
 using Xunit;
+using XUnitTestProject1.Helper;
 
 namespace XUnitTestProject1
 {
+
+
+
     public class EmployeeActivityApiControllerTest
     {
+
+        
+
         [Fact]
         public void GetTest()
         {
             //arrange
             DBSettings dBSettings = new DBSettings();
+            IMemoryCache memoryCache = MemoryCacheHelper.GetMemoryCache();
+            CacheSettings cacheSettings = new CacheSettings();
             EmployeeActivityDBContext employeeActivityDBContext = new EmployeeActivityDBContext(dBSettings);
-            EmployeeActivityRepository employeeActivityRepository = new EmployeeActivityRepository(employeeActivityDBContext);
+            EmployeeActivityRepository employeeActivityRepository = new EmployeeActivityRepository(employeeActivityDBContext, memoryCache, cacheSettings);
             EmployeeActivityApiController employeeActivityController = new EmployeeActivityApiController(employeeActivityRepository);
 
 
@@ -35,8 +46,10 @@ namespace XUnitTestProject1
         {
             //arrange
             DBSettings dBSettings = new DBSettings();
+            IMemoryCache memoryCache = MemoryCacheHelper.GetMemoryCache();
+            CacheSettings cacheSettings = new CacheSettings();
             EmployeeActivityDBContext employeeActivityDBContext = new EmployeeActivityDBContext(dBSettings);
-            EmployeeActivityRepository employeeActivityRepository = new EmployeeActivityRepository(employeeActivityDBContext);
+            EmployeeActivityRepository employeeActivityRepository = new EmployeeActivityRepository(employeeActivityDBContext, memoryCache, cacheSettings);
             EmployeeActivityApiController employeeActivityController = new EmployeeActivityApiController(employeeActivityRepository);
             var tics = DateTime.Now.Ticks;
             EmployeeActivity employeeActivity = new EmployeeActivity()

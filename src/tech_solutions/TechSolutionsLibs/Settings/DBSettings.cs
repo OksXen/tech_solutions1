@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
-using TechSolutionsLibs.Repository.Interface;
+using TechSolutionsLibs.Settings.Interface;
 
-namespace TechSolutionsLibs.Repository
+namespace TechSolutionsLibs.Settings
 {
     public class DBSettings : IDBSettings
     {

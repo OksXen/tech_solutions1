@@ -12,6 +12,7 @@
           "Microsoft.AspNetCore.Mvc": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "3.0.0",
+          "Microsoft.Extensions.Caching.Memory": "3.0.0",
           "Microsoft.Extensions.Configuration.Json": "3.0.0"
         },
         "runtime": {

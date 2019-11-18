@@ -6,3 +6,5 @@ There are three different types of applicaitons in the solution. They are all wr
 2. .NET Core MVC Razor
 3. Angular
 
+Sorry - I did not have enough time to add Dapper feature for Angular
+

@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Employee Activity Form</h1>
-  {{diagnostic}}
+  
 <form ngNativeValidate  (ngSubmit)="onSubmit()"  [formGroup]="employeeActivityForm" >
   <div class="form-group">
     <label for="fname">First Name</label>
@@ -33,10 +33,18 @@
 
   <div class="form-group">
     <label for="activityName">Activity Name</label>
-    <input type="text" class="form-control" id="activityName" required formControlName="activityName" name="activityName">
+
+
+    <select class="form-control" id="activityName" formControlName="activityName" name="activityName" required>
+      <option value="Developing in .Net Core ReactJs" selected>Developing in .Net Core ReactJs</option>
+      <option value="Developing in .Net Core Angular">Developing in .Net Core Angular</option>
+      <option value="Developing in .Net Core ReactJs And Redux">Developing in .Net Core ReactJs And Redux</option>
+    </select>
+
     <span class="text-danger" *ngIf="employeeActivityForm.hasError('required', 'activityName') && employeeActivityForm.submitted">
       Activity is required.
     </span>
+
   </div>
 
   <div class="form-group">

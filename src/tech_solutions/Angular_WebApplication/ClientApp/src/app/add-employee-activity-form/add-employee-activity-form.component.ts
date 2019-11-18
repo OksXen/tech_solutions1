@@ -11,7 +11,7 @@ import { EmployeeActivity } from '../employee-activity';
   styleUrls: ['./add-employee-activity-form.component.css']
 })
 export class AddEmployeeActivityFormComponent implements OnInit {
-   // employeeActivityForm = new FormControl('');
+   
     employeeActivityForm = new FormGroup({
         firstName: new FormControl(''),
         lastName: new FormControl(''),
@@ -21,8 +21,7 @@ export class AddEmployeeActivityFormComponent implements OnInit {
     });
     title: string = "Create";
     errorMessage: any;
-
-  //  model = new EmployeeActivity(0, 'init fname', 'init lname', 'email@address.com', 'activity name', 'comment1');
+  
 
     submitted = false;
 

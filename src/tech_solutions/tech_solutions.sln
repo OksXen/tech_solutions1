@@ -11,6 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTestProject1", "XUnitT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{BC56EA6C-A4DB-4A26-8441-FCB25ED82DF0}"
 	ProjectSection(SolutionItems) = preProject
+		Documents\About the Solution.txt = Documents\About the Solution.txt
 		Documents\Database Connection Issues.txt = Documents\Database Connection Issues.txt
 		Documents\How to run reactjs test.txt = Documents\How to run reactjs test.txt
 		Documents\Issues debugging React.txt = Documents\Issues debugging React.txt

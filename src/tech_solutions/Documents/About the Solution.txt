@@ -1,0 +1,18 @@
+
+
+The solution has three web application, one library and a Unit Test Project. 
+
+** Web Applications **
+1. ReactJs
+2. .NET Core MVC Razor
+3. Angular
+
+All web application is using the same libarary. 
+
+
+
+** Library Project **
+TechSolutionsLibs
+
+Each web application is using one library. The library has the controllers, models and repository. 
+The Libary is shared and reused the Web Applications
